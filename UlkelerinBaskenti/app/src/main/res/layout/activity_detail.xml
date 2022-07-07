@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="253dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="67dp"
+        app:layout_constraintBottom_toTopOf="@+id/ulkeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selectimage"
+        android:onClick="selectImage"/>
+
+    <EditText
+        android:id="@+id/ulkeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="47dp"
+        android:ems="10"
+        android:hint="ÜLKE İSİMİ GİRİNİZ"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/ulkeBaskentText"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/ulkeBaskentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="ÜLKE BAŞKENTİNİ GİRİNİZ"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/ulkeBaskentYilText"
+        app:layout_constraintEnd_toEndOf="@+id/ulkeText"
+        app:layout_constraintTop_toBottomOf="@+id/ulkeText" />
+
+    <EditText
+        android:id="@+id/ulkeBaskentYilText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
+        android:ems="10"
+        android:hint="ÜLKE BAŞKENTİNİ YILI"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/kaydetButton"
+        app:layout_constraintStart_toStartOf="@+id/ulkeBaskentText"
+        app:layout_constraintTop_toBottomOf="@+id/ulkeBaskentText" />
+
+    <Button
+        android:id="@+id/kaydetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="67dp"
+        android:text="KAYDET"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ulkeBaskentYilText"
+        android:onClick="save"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
